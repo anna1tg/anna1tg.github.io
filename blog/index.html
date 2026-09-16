@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+description: Articles by Anna Aleshko on AI art, brand strategy, brand identity and advertising.
+---
+<section class="blog-head">
+  <span class="label">Journal</span>
+  <h1 class="page-title">Notes on AI, brands &amp; ads</h1>
+  <p class="lede">Thoughts, how-tos and behind-the-scenes from my creative direction work.</p>
+</section>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <time class="label" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      <span class="pl-body">
+        <span class="pl-title">{{ post.title }}</span>
+        {% if post.description %}<span class="pl-desc">{{ post.description }}</span>{% endif %}
+      </span>
+      <span class="pl-arrow" aria-hidden="true">→</span>
+    </a>
+  </li>
+  {% else %}
+  <li class="empty">The first article is coming soon.</li>
+  {% endfor %}
+</ul>

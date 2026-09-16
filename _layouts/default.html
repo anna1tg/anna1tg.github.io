@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23D2203F'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="label home-link" href="{{ '/' | relative_url }}">Anna Aleshko ✦ Creative Direction</a>
+    <nav class="label" aria-label="Main">
+      <a href="{{ '/#services' | relative_url }}">Services</a>
+      <a href="{{ '/#work' | relative_url }}">Work</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/#contact' | relative_url }}">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="label">
+    <span>© {{ site.time | date: '%Y' }} Anna Aleshko</span>
+    <span class="foot-links">
+      <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>
+      <a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok</a>
+      <a href="{{ '/blog/feed.xml' | relative_url }}">RSS</a>
+    </span>
+  </footer>
+</div>
+{% if page.diffusion %}<script src="{{ '/assets/js/diffusion.js' | relative_url }}"></script>{% endif %}
+</body>
+</html>

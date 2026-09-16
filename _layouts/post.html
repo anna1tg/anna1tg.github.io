@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-head">
+    <a class="label back" href="{{ '/blog/' | relative_url }}">← All articles</a>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-lede">{{ page.description }}</p>{% endif %}
+    <p class="label post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+      {% assign words = content | number_of_words %}
+      · {{ words | divided_by: 200 | plus: 1 }} min read
+    </p>
+  </header>
+
+  {% if page.image %}
+  <img class="post-cover" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <aside class="post-cta">
+    <p>Want this kind of thinking for your brand?</p>
+    <a class="btn primary" href="{{ site.instagram }}" target="_blank" rel="noopener">Message on Instagram <span aria-hidden="true">↗</span></a>
+  </aside>
+</article>

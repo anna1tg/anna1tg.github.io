@@ -1,0 +1,51 @@
+# ------------------------------------------------------------
+#  Site settings — the only file you may need to edit once
+# ------------------------------------------------------------
+title: Anna Aleshko
+tagline: AI-Powered Creative Director
+description: >-
+  Anna Aleshko is an AI-powered creative director from Kyiv working worldwide:
+  strategy, brand identity, AI art, ads and consulting.
+author: Anna Aleshko
+lang: en
+
+# Site address (GitHub username: anna1tg)
+url: "https://anna1tg.github.io"
+baseurl: ""
+
+social:
+  name: Anna Aleshko
+  links:
+    - https://www.instagram.com/anna_aleshko_art/
+    - https://www.tiktok.com/@anna_aleshko_art
+
+instagram: https://www.instagram.com/anna_aleshko_art/
+tiktok: https://www.tiktok.com/@anna_aleshko_art
+youtube: https://youtu.be/ew3CFQ9tVfA
+
+# Articles live at /blog/article-name/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - HOW-TO.md
+  - README.md
+  - images/README.md

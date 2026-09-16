@@ -1,0 +1,25 @@
+{%- assign lang = include.lang | default: 'en' -%}
+{%- assign t = site.data.i18n[lang] -%}
+<ul class="post-list">
+  {%- assign n = 0 -%}
+  {%- assign max = include.limit | default: 1000 -%}
+  {%- for post in site.posts -%}
+  {%- assign plang = post.lang | default: 'en' -%}
+  {%- if plang == lang and n < max -%}
+  {%- assign n = n | plus: 1 -%}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <time class="label" datetime="{{ post.date | date_to_xmlschema }}">{% include date.html date=post.date lang=lang %}</time>
+      <span class="pl-body">
+        <span class="pl-title">{{ post.title }}</span>
+        {% if post.description %}<span class="pl-desc">{{ post.description }}</span>{% endif %}
+      </span>
+      <span class="pl-arrow" aria-hidden="true">→</span>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- endfor -%}
+  {%- if n == 0 %}
+  <li class="empty">{{ t.empty }}</li>
+  {%- endif %}
+</ul>

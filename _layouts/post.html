@@ -1,15 +1,23 @@
 ---
 layout: default
 ---
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == 'uk' -%}{%- assign blog_url = '/uk/blog/' -%}{%- else -%}{%- assign blog_url = '/blog/' -%}{%- endif -%}
+{%- assign alt = nil -%}
+{%- if page.ref -%}{%- assign alt = site.posts | where: "ref", page.ref | where_exp: "p", "p.url != page.url" | first -%}{%- endif -%}
 <article class="post">
   <header class="post-head">
-    <a class="label back" href="{{ '/blog/' | relative_url }}">← All articles</a>
+    <div class="post-top">
+      <a class="label back" href="{{ blog_url | relative_url }}">{{ t.all_articles }}</a>
+      {% if alt %}<a class="label back" href="{{ alt.url | relative_url }}" hreflang="{{ alt.lang | default: 'en' }}">{{ t.read_in }} →</a>{% endif %}
+    </div>
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.description %}<p class="post-lede">{{ page.description }}</p>{% endif %}
     <p class="label post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
-      {% assign words = content | number_of_words %}
-      · {{ words | divided_by: 200 | plus: 1 }} min read
+      <time datetime="{{ page.date | date_to_xmlschema }}">{% include date.html date=page.date lang=lang %}</time>
+      {% assign words = content | strip_html | split: " " | size %}
+      · {{ words | divided_by: 200 | plus: 1 }} {{ t.min_read }}
     </p>
   </header>
 
@@ -22,7 +30,7 @@ layout: default
   </div>
 
   <aside class="post-cta">
-    <p>Want this kind of thinking for your brand?</p>
-    <a class="btn primary" href="{{ site.instagram }}" target="_blank" rel="noopener">Message on Instagram <span aria-hidden="true">↗</span></a>
+    <p>{{ page.cta_text | default: t.cta_text }}</p>
+    <a class="btn primary" href="{{ page.cta_url | default: site.instagram }}" target="_blank" rel="noopener">{{ page.cta_button | default: t.cta_button }} <span aria-hidden="true">↗</span></a>
   </aside>
 </article>

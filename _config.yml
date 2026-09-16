@@ -8,6 +8,7 @@ description: >-
   strategy, brand identity, AI art, ads and consulting.
 author: Anna Aleshko
 lang: en
+locale: en_US
 
 # Site address (GitHub username: anna1tg)
 url: "https://anna1tg.github.io"
@@ -19,9 +20,14 @@ social:
     - https://www.instagram.com/anna_aleshko_art/
     - https://www.tiktok.com/@anna_aleshko_art
 
+email: an.aleshko@gmail.com
 instagram: https://www.instagram.com/anna_aleshko_art/
 tiktok: https://www.tiktok.com/@anna_aleshko_art
 youtube: https://youtu.be/ew3CFQ9tVfA
+
+# Google Search Console verification
+webmaster_verifications:
+  google: 6Huwoe8I26yUXQKMM9XkL7m0tn9DK1IaiAf0j0rNQcY
 
 # Articles live at /blog/article-name/
 permalink: /blog/:title/
@@ -39,11 +45,28 @@ feed:
   path: blog/feed.xml
 
 defaults:
+  # English articles: _posts/  ->  /blog/article-name/
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+      lang: en
+      locale: en_US
+  # Ukrainian articles: uk/_posts/  ->  /uk/blog/article-name/
+  - scope:
+      path: "uk"
+      type: posts
+    values:
+      layout: post
+      lang: uk
+      locale: uk_UA
+      permalink: /uk/blog/:title/
+  - scope:
+      path: "uk"
+    values:
+      lang: uk
+      locale: uk_UA
 
 exclude:
   - HOW-TO.md

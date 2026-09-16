@@ -1,0 +1,52 @@
+en:
+  locale: en_US
+  services: Services
+  work: Work
+  collab: For brands
+  blog: Blog
+  contact: Contact
+  all_articles: "← All articles"
+  min_read: min read
+  cta_text: Want this kind of thinking for your brand?
+  cta_button: Message on Instagram
+  read_in: Читати українською
+  blog_label: Journal
+  blog_title: "Notes on AI, brands & ads"
+  blog_lede: Thoughts, how-tos and behind-the-scenes from my creative direction work.
+  empty: The first article is coming soon.
+  switch_label: UA
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  rates: Rates
+  rates_label: Services & rates
+  rates_title: What I do and what it costs
+  rates_lede: Starting prices for the most requested work. Every project is quoted individually after a short brief.
+  rates_extras: Add-ons
+  rates_fine: "Prices are starting points and depend on scope, usage rights and timing. Long-term partners get individual terms."
+  rates_cta: Tell me about your project
+  rates_subject: Project request
+uk:
+  locale: uk_UA
+  services: Послуги
+  work: Роботи
+  collab: Реклама
+  blog: Блог
+  contact: Контакти
+  all_articles: "← Усі статті"
+  min_read: хв читання
+  cta_text: Хочете такий підхід для свого бренду?
+  cta_button: Написати в Instagram
+  read_in: Read in English
+  blog_label: Блог
+  blog_title: "Нотатки про ШІ, бренди та рекламу"
+  blog_lede: Думки, практичні поради й закулісся моєї роботи креативної директорки.
+  empty: Перша стаття зовсім скоро.
+  switch_label: EN
+  months: [січня, лютого, березня, квітня, травня, червня, липня, серпня, вересня, жовтня, листопада, грудня]
+  rates: Ціни
+  rates_label: Послуги та ціни
+  rates_title: Що я роблю і скільки це коштує
+  rates_lede: Стартові ціни на найпопулярніші послуги. Точну вартість рахую після короткого брифу.
+  rates_extras: Доплати
+  rates_fine: "Ціни стартові й залежать від обсягу, прав на використання та термінів. Для довгострокових партнерів — індивідуальні умови."
+  rates_cta: Розкажіть про ваш проєкт
+  rates_subject: Запит на співпрацю

@@ -1,14 +1,27 @@
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == 'uk' -%}{%- assign blog_url = '/uk/blog/' -%}{%- assign rates_url = '/uk/rates/' -%}{%- else -%}{%- assign blog_url = '/blog/' -%}{%- assign rates_url = '/rates/' -%}{%- endif -%}
+{%- comment -%} Find the page in the other language (same `ref`) {%- endcomment -%}
+{%- assign alt = nil -%}
+{%- if page.ref -%}
+  {%- assign alt = site.posts | where: "ref", page.ref | where_exp: "p", "p.url != page.url" | first -%}
+  {%- unless alt -%}{%- assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.url != page.url" | first -%}{%- endunless -%}
+{%- endif -%}
 <!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   {% seo %}
   {% feed_meta %}
+  {%- if alt %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ alt.lang | default: 'en' }}" href="{{ alt.url | absolute_url }}">
+  {%- endif %}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23D2203F'>✦</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -16,10 +29,15 @@
   <header class="bar">
     <a class="label home-link" href="{{ '/' | relative_url }}">Anna Aleshko ✦ Creative Direction</a>
     <nav class="label" aria-label="Main">
-      <a href="{{ '/#services' | relative_url }}">Services</a>
-      <a href="{{ '/#work' | relative_url }}">Work</a>
-      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
-      <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      <a href="{{ '/#services' | relative_url }}">{{ t.services }}</a>
+      <a href="{{ '/#work' | relative_url }}">{{ t.work }}</a>
+      <a href="{{ '/#collab' | relative_url }}">{{ t.collab }}</a>
+      <a class="nav-keep" href="{{ rates_url | relative_url }}"{% if page.url contains '/rates/' %} aria-current="page"{% endif %}>{{ t.rates }}</a>
+      <a class="nav-keep" href="{{ blog_url | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>{{ t.blog }}</a>
+      <a href="{{ '/#contact' | relative_url }}">{{ t.contact }}</a>
+      {%- if alt %}
+      <a class="lang-switch nav-keep" href="{{ alt.url | relative_url }}" hreflang="{{ alt.lang | default: 'en' }}" title="{{ t.read_in }}">{{ t.switch_label }}</a>
+      {%- endif %}
     </nav>
   </header>
 
@@ -30,12 +48,16 @@
   <footer class="label">
     <span>© {{ site.time | date: '%Y' }} Anna Aleshko</span>
     <span class="foot-links">
+      <a href="mailto:{{ site.email }}">Email</a>
       <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>
       <a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok</a>
-      <a href="{{ '/blog/feed.xml' | relative_url }}">RSS</a>
+      <a href="{{ '/rates/' | relative_url }}">Rates</a>
+      <a href="{{ '/uk/rates/' | relative_url }}">Ціни</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog EN</a>
+      <a href="{{ '/uk/blog/' | relative_url }}">Блог UA</a>
     </span>
   </footer>
 </div>
-{% if page.diffusion %}<script src="{{ '/assets/js/diffusion.js' | relative_url }}"></script>{% endif %}
+
 </body>
 </html>

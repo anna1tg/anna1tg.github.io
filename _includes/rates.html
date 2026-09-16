@@ -1,0 +1,56 @@
+{%- assign lang = include.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign desc_k = lang | append: '_desc' -%}
+{%- assign price_k = lang | append: '_price' -%}
+{%- assign group_k = 'group_' | append: lang -%}
+{%- assign note_k = 'note_' | append: lang -%}
+<section class="blog-head">
+  <span class="label">{{ t.rates_label }}</span>
+  <h1 class="page-title">{{ t.rates_title }}</h1>
+  <p class="lede">{{ t.rates_lede }}</p>
+</section>
+
+{%- for g in site.data.rates %}
+<section class="rate-group">
+  <div class="rate-head">
+    <h2>{{ g[group_k] }}</h2>
+    <p class="label">{{ g[note_k] }}</p>
+  </div>
+  <ul class="rates">
+    {%- for r in g.items %}
+    <li{% if r.highlight %} class="is-highlight"{% endif %}>
+      <div>
+        <h3>{{ r[lang] }}</h3>
+        <p>{{ r[desc_k] }}</p>
+      </div>
+      <span class="price">{{ r[price_k] }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
+
+<section class="rate-group">
+  <div class="rate-head">
+    <h2>{{ t.rates_extras }}</h2>
+  </div>
+  <ul class="rates rates-extras">
+    {%- for x in site.data.rates_extras %}
+    <li>
+      <div><h3>{{ x[lang] }}</h3></div>
+      <span class="price">{{ x[price_k] }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+  <p class="rate-fine">{{ t.rates_fine }}</p>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>{{ t.rates_cta }}</h2>
+    <div class="cta">
+      <a class="btn primary" href="mailto:{{ site.email }}?subject={{ t.rates_subject | uri_escape }}">{{ site.email }}</a>
+      <a class="btn ghost" href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>

@@ -2,7 +2,7 @@
 layout: default
 title: Anna Aleshko
 description: Anna Aleshko is an AI-powered creative director from Kyiv working worldwide — strategy, brand identity, AI art, ads and consulting.
-diffusion: true
+lang: en
 ---
     <div class="hero">
       <div>
@@ -11,17 +11,13 @@ diffusion: true
         <p class="role"><b>AI-powered creative director.</b> Strategy, brand identity, AI art and ads: from the first idea to the finished campaign.</p>
         <div class="cta">
           <a class="btn primary" href="{{ site.instagram }}" target="_blank" rel="noopener">Message on Instagram <span aria-hidden="true">↗</span></a>
-          <a class="btn ghost" href="#services">See services</a>
+          <a class="btn ghost" href="#collab">Advertise with me</a>
         </div>
       </div>
 
-      <figure class="render" style="margin:0">
-        <p class="prompt"><span>&gt;</span> brand mark, four-point star, crimson on violet haze</p>
-        <canvas id="diffusion" width="56" height="56" aria-label="Animated image slowly resolving from noise into a four-point star, like an AI image being generated"></canvas>
-        <figcaption class="meta label">
-          <span id="step">step 30 / 30</span>
-          <span id="seed">seed 0417</span>
-        </figcaption>
+      <figure class="portrait">
+        <img src="{{ '/images/anna-aleshko-portrait.jpg' | relative_url }}" width="852" height="1065" alt="Anna Aleshko as Vermeer's Girl with a Pearl Earring, an AI-assisted self-portrait">
+        <figcaption class="label">Self-portrait after Vermeer · AI art</figcaption>
       </figure>
     </div>
 
@@ -56,11 +52,114 @@ diffusion: true
       </ul>
     </section>
 
+    <section id="collab">
+      <div class="sec-head">
+        <span class="label">For brands</span>
+        <div>
+          <h2>Advertise with me as a creator</h2>
+          <p class="lede collab-lede">I create and publish sponsored content on my own channels, made with the same care as my art. Your product gets real attention from an audience that follows me for AI, style and creativity.</p>
+        </div>
+      </div>
+      <div class="collab">
+        <dl class="reach">
+          <div>
+            <dt class="label">Instagram</dt>
+            <dd><span class="num">10.9K</span> followers</dd>
+            <a class="label" href="{{ site.instagram }}" target="_blank" rel="noopener">@anna_aleshko_art ↗</a>
+          </div>
+          <div>
+            <dt class="label">TikTok</dt>
+            <dd>Short videos</dd>
+            <a class="label" href="{{ site.tiktok }}" target="_blank" rel="noopener">@anna_aleshko_art ↗</a>
+          </div>
+        </dl>
+        <div class="formats">
+          <h3 class="label">Formats</h3>
+          <ul>
+            <li><b>Reels</b> — short video reviews and demos</li>
+            <li><b>Carousels</b> — posts with photos and useful slides</li>
+            <li><b>Stories</b> — quick mentions with a link</li>
+            <li><b>TikTok videos</b> — native short-form content</li>
+            <li><b>UGC</b> — videos and photos for your own ads and pages</li>
+            <li><b>AI visuals</b> — product images and creative concepts</li>
+          </ul>
+          <div class="cta">
+            <a class="btn primary" href="mailto:{{ site.email }}?subject=Collaboration%20request">Request a collaboration</a>
+            <a class="btn ghost" href="{{ site.instagram }}" target="_blank" rel="noopener">DM on Instagram <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="label collab-note"><a href="{{ '/rates/' | relative_url }}">See all services &amp; rates →</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+      </div>
+    </section>
+
     <section id="work">
       <div class="sec-head">
         <span class="label">Selected work</span>
-        <p class="lede">Current projects and behind-the-scenes are on Instagram, short motion pieces on TikTok, and longer breakdowns on YouTube.</p>
+        <p class="lede">A few recent pieces: art history reimagined, cinematic AI scenes and ads for brands. Tap any work to watch it on Instagram.</p>
       </div>
+      <ul class="gallery">
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DcNqMSAK3Lr/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-pearl-earring.jpg' | relative_url }}" alt="Anna Aleshko recreating Vermeer’s Girl with a Pearl Earring with AI, next to the original painting" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Girl with a Pearl Earring</b><span class="label">Self-portrait after Vermeer</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DcLcdggqR2V/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-cyclops.jpg' | relative_url }}" alt="AI scene of Anna as Galatea beside a giant cyclops, with Redon’s painting The Cyclops below" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>The Cyclops</b><span class="label">After Odilon Redon</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DcN6w8xqCfz/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-fallen-angel.jpg' | relative_url }}" alt="AI reimagining of Cabanel’s Fallen Angel as a winged woman by the sea" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>The Fallen Angel</b><span class="label">After Alexandre Cabanel</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DciXn8AKH9e/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-freeze-time.jpg' | relative_url }}" alt="Frozen moment in a diner with coffee and breakfast floating in the air" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Freeze Time</b><span class="label">AI video</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DcS2uDYKyZb/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-agamemnon.jpg' | relative_url }}" alt="A warrior stepping out of a burning cinema screen into the audience" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Agamemnon</b><span class="label">Cinematic AI effects</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DdHlK36qcgy/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-4.jpg' | relative_url }}" alt="Woman dancing in a city street with a man whose head is a coffee cup" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>City Surreal</b><span class="label">AI art</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DdHlDgiqldt/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-1.jpg' | relative_url }}" alt="Close-up AI portrait of a freckled woman holding a pearl" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>The Pearl</b><span class="label">AI portrait</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DdPBEVEqk07/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/art-3.jpg' | relative_url }}" alt="Close-up cinematic AI portrait of a bearded man" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Faces</b><span class="label">AI portrait</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/DZxK7WwqEor/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/ad-homelittle.jpg' | relative_url }}" alt="AI ad for Homelittle poufs: woman carrying a boucle pouf" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Homelittle</b><span class="label">Ad · AI video</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/anna_aleshko_art/reel/Da5eGTVK1vB/" target="_blank" rel="noopener">
+            <img src="{{ '/images/work/ad-interiors.jpg' | relative_url }}" alt="Animated interior visualisation of a living room" loading="lazy" width="600" height="1067">
+            <span class="g-cap"><b>Interiors in Motion</b><span class="label">Ad · AI video</span></span>
+          </a>
+        </li>
+      </ul>
+
       <div class="work">
         <a class="tile" href="{{ site.instagram }}" target="_blank" rel="noopener">
           <div>
@@ -94,29 +193,15 @@ diffusion: true
           <a class="btn ghost" href="{{ '/blog/' | relative_url }}">All articles</a>
         </div>
       </div>
-      <ul class="post-list">
-        {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">
-            <time class="label" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
-            <span class="pl-body">
-              <span class="pl-title">{{ post.title }}</span>
-              {% if post.description %}<span class="pl-desc">{{ post.description }}</span>{% endif %}
-            </span>
-            <span class="pl-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-        {% else %}
-        <li class="empty">The first article is coming soon.</li>
-        {% endfor %}
-      </ul>
+      {% include post-list.html lang='en' limit=3 %}
     </section>
 
     <section id="contact">
       <div class="contact">
         <h2>Have a brand to <em>build?</em></h2>
         <div class="cta">
-          <a class="btn primary" href="{{ site.instagram }}" target="_blank" rel="noopener">Send a DM <span aria-hidden="true">↗</span></a>
+          <a class="btn primary" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <a class="btn ghost" href="{{ site.instagram }}" target="_blank" rel="noopener">Send a DM <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

@@ -1,0 +1,126 @@
+# ------------------------------------------------------------
+#  Services & rates. Edit prices here — both pages update.
+#  All prices in USD. en_price = English page, uk_price = Ukrainian page
+# ------------------------------------------------------------
+
+- group_en: Advertising on my channels
+  group_uk: Реклама на моїх сторінках
+  note_en: Instagram @anna_aleshko_art · 10.9K followers, plus TikTok
+  note_uk: Instagram @anna_aleshko_art · 10,9 тис. підписників, а також TikTok
+  items:
+    - en: Instagram Reels
+      uk: Reels в Instagram
+      en_desc: Idea, script, shooting, editing and publication
+      uk_desc: Ідея, сценарій, зйомка, монтаж і публікація
+      en_price: from $350
+      uk_price: від $350
+    - en: Stories
+      uk: Сторіс
+      en_desc: 1–3 frames with a link or promo code
+      uk_desc: 1–3 кадри з посиланням або промокодом
+      en_price: from $80
+      uk_price: від $80
+    - en: Carousel post
+      uk: Карусель у стрічці
+      en_desc: Photos or designed slides with a useful angle
+      uk_desc: Фото або дизайнерські слайди з корисною подачею
+      en_price: from $200
+      uk_price: від $200
+    - en: TikTok video
+      uk: Відео в TikTok
+      en_desc: Native short video, or a Reels repost
+      uk_desc: Нативне коротке відео або дублювання Reels
+      en_price: from $100
+      uk_price: від $100
+    - en: Package
+      uk: Пакет
+      en_desc: Reels + 3 Stories + TikTok
+      uk_desc: Reels + 3 сторіс + TikTok
+      en_price: from $450
+      uk_price: від $450
+      highlight: true
+
+- group_en: Content for your brand
+  group_uk: Контент для вашого бренду
+  note_en: Delivered to you for your own pages and ads, no publication on my channels
+  note_uk: Передаю вам для ваших сторінок і реклами, без публікації в мене
+  items:
+    - en: UGC video
+      uk: UGC-відео
+      en_desc: Authentic video review, unboxing or demo, 15–60 sec
+      uk_desc: Живий відеовідгук, розпаковка чи демонстрація, 15–60 сек
+      en_price: from $200
+      uk_price: від $200
+    - en: AI product visual
+      uk: AI-візуал продукту
+      en_desc: Your product in any setting, retouched and ready to use
+      uk_desc: Ваш продукт у будь-якій локації, з ретушшю, готовий до використання
+      en_price: from $60 / image
+      uk_price: від $60 / шт.
+    - en: AI visual set
+      uk: Набір AI-візуалів
+      en_desc: 10 images in one style for a launch or campaign
+      uk_desc: 10 зображень в одному стилі для запуску чи кампанії
+      en_price: from $450
+      uk_price: від $450
+    - en: AI video
+      uk: AI-відео
+      en_desc: Short generated clip or animated visual, 5–15 sec
+      uk_desc: Короткий згенерований ролик або анімований візуал, 5–15 сек
+      en_price: from $150
+      uk_price: від $150
+    - en: Ad creatives
+      uk: Рекламні креативи
+      en_desc: 5 static or motion variations for paid ads
+      uk_desc: 5 статичних або анімованих варіантів для таргетованої реклами
+      en_price: from $200
+      uk_price: від $200
+
+- group_en: Strategy & brand
+  group_uk: Стратегія та бренд
+  note_en: For brands that want every visual to have a reason behind it
+  note_uk: Для брендів, яким важливо, щоб кожен візуал мав сенс
+  items:
+    - en: Brand strategy
+      uk: Бренд-стратегія
+      en_desc: Positioning, audience, messaging and content directions
+      uk_desc: Позиціонування, аудиторія, меседжі та напрями контенту
+      en_price: from $500
+      uk_price: від $500
+    - en: Brand look & image style
+      uk: Образ бренду та стиль зображень
+      en_desc: Moodboard, visual references and AI image style guide
+      uk_desc: Мудборд, візуальні референси та гайд зі стилю AI-зображень
+      en_price: from $500
+      uk_price: від $500
+    - en: Campaign concept
+      uk: Концепція кампанії
+      en_desc: Big idea, key visuals and a content plan for a launch
+      uk_desc: Ідея, ключові візуали та контент-план для запуску
+      en_price: from $400
+      uk_price: від $400
+
+- group_en: Consulting & learning
+  group_uk: Консультації та навчання
+  note_en: Online, in English or Ukrainian
+  note_uk: Онлайн, українською або англійською
+  items:
+    - en: AI consultation
+      uk: Консультація з AI
+      en_desc: 60 min on ChatGPT, Claude, Gemini and AI visuals for your tasks
+      uk_desc: 60 хв про ChatGPT, Claude, Gemini та AI-візуали під ваші задачі
+      en_price: from $60
+      uk_price: від $60
+    - en: Content & ads audit
+      uk: Аудит контенту та реклами
+      en_desc: Review of your profile or ads with a written action list
+      uk_desc: Розбір профілю чи реклами з письмовим списком дій
+      en_price: from $120
+      uk_price: від $120
+    - en: Team workshop
+      uk: Воркшоп для команди
+      en_desc: 2–3 hours of hands-on AI for marketing and content teams
+      uk_desc: 2–3 години практики з AI для маркетингу та контент-команди
+      en_price: from $300
+      uk_price: від $300
+

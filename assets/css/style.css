@@ -204,7 +204,6 @@
   }
   @media (max-width: 640px) {
     .services li, .work { grid-template-columns: 1fr; }
-    .bar nav a:not(.nav-keep) { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     .btn, .tile { transition: none; }
@@ -431,3 +430,11 @@
 @media (max-width: 1000px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .gallery img { transition: none; } .gallery a:hover img { transform: none; } }
 @media (max-width: 820px) { .portrait { justify-self: start; max-width: 420px; } }
+
+/* ---------- header on narrow screens: full menu on its own row ---------- */
+.bar nav { align-items: center; }
+@media (max-width: 900px) {
+  .bar { flex-wrap: wrap; row-gap: 12px; padding-block: 16px; }
+  .bar nav { width: 100%; gap: 10px 18px; }
+  .bar nav a { padding-block: 4px; }
+}

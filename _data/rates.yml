@@ -69,6 +69,12 @@
       uk_desc: Короткий згенерований ролик або анімований візуал, 5–15 сек
       en_price: from $150
       uk_price: від $150
+    - en: Presentation design
+      uk: Дизайн презентації
+      en_desc: Pitch deck or brand presentation, up to 15 slides, structure and copy included
+      uk_desc: Пітч-дек або презентація бренду, до 15 слайдів, зі структурою та текстами
+      en_price: from $250
+      uk_price: від $250
     - en: Ad creatives
       uk: Рекламні креативи
       en_desc: 5 static or motion variations for paid ads

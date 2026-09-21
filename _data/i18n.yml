@@ -22,6 +22,9 @@ en:
   rates_lede: Starting prices for the most requested work. Every project is quoted individually after a short brief.
   rates_extras: Add-ons
   rates_fine: "Prices are starting points and depend on scope, usage rights and timing. Long-term partners get individual terms."
+  rates_pay: How to pay
+  pay_intl: Pay via Payoneer
+  pay_ua: Pay by card (Ukraine)
   rates_cta: Tell me about your project
   rates_subject: Project request
 uk:
@@ -48,5 +51,8 @@ uk:
   rates_lede: Стартові ціни на найпопулярніші послуги. Точну вартість рахую після короткого брифу.
   rates_extras: Доплати
   rates_fine: "Ціни стартові й залежать від обсягу, прав на використання та термінів. Для довгострокових партнерів — індивідуальні умови."
+  rates_pay: Як оплатити
+  pay_intl: Оплата через Payoneer (з-за кордону)
+  pay_ua: Оплатити карткою (Україна)
   rates_cta: Розкажіть про ваш проєкт
   rates_subject: Запит на співпрацю

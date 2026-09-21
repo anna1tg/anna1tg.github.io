@@ -1,6 +1,6 @@
 {%- assign lang = page.lang | default: site.lang -%}
 {%- assign t = site.data.i18n[lang] -%}
-{%- if lang == 'uk' -%}{%- assign blog_url = '/uk/blog/' -%}{%- assign rates_url = '/uk/rates/' -%}{%- else -%}{%- assign blog_url = '/blog/' -%}{%- assign rates_url = '/rates/' -%}{%- endif -%}
+{%- if lang == 'uk' -%}{%- assign home_url = '/uk/' -%}{%- assign blog_url = '/uk/blog/' -%}{%- assign rates_url = '/uk/rates/' -%}{%- else -%}{%- assign home_url = '/' -%}{%- assign blog_url = '/blog/' -%}{%- assign rates_url = '/rates/' -%}{%- endif -%}
 {%- comment -%} Find the page in the other language (same `ref`) {%- endcomment -%}
 {%- assign alt = nil -%}
 {%- if page.ref -%}
@@ -27,14 +27,14 @@
 <body>
 <div class="wrap">
   <header class="bar">
-    <a class="label home-link" href="{{ '/' | relative_url }}">Anna Aleshko ✦ Creative Direction</a>
+    <a class="label home-link" href="{{ home_url | relative_url }}">Anna Aleshko ✦ Creative Direction</a>
     <nav class="label" aria-label="Main">
-      <a href="{{ '/#services' | relative_url }}">{{ t.services }}</a>
-      <a href="{{ '/#work' | relative_url }}">{{ t.work }}</a>
-      <a href="{{ '/#collab' | relative_url }}">{{ t.collab }}</a>
+      <a href="{{ home_url | append: '#services' | relative_url }}">{{ t.services }}</a>
+      <a href="{{ home_url | append: '#work' | relative_url }}">{{ t.work }}</a>
+      <a href="{{ home_url | append: '#collab' | relative_url }}">{{ t.collab }}</a>
       <a class="nav-keep" href="{{ rates_url | relative_url }}"{% if page.url contains '/rates/' %} aria-current="page"{% endif %}>{{ t.rates }}</a>
       <a class="nav-keep" href="{{ blog_url | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>{{ t.blog }}</a>
-      <a href="{{ '/#contact' | relative_url }}">{{ t.contact }}</a>
+      <a href="{{ home_url | append: '#contact' | relative_url }}">{{ t.contact }}</a>
       {%- if alt %}
       <a class="lang-switch nav-keep" href="{{ alt.url | relative_url }}" hreflang="{{ alt.lang | default: 'en' }}" title="{{ t.read_in }}">{{ t.switch_label }}</a>
       {%- endif %}

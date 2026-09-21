@@ -25,6 +25,17 @@ instagram: https://www.instagram.com/anna_aleshko_art/
 tiktok: https://www.tiktok.com/@anna_aleshko_art
 youtube: https://youtu.be/ew3CFQ9tVfA
 
+# Payment links — paste your own links here, then the Pay buttons appear on the rates page.
+# Leave empty ("") to hide a button.
+payment:
+  # Payoneer — for clients abroad. Paste your payoneer.me link or a request-a-payment link.
+  intl: ""
+  # For clients in Ukraine — leave empty for now. Paste a LiqPay / monobank / other link when ready.
+  ua: ""
+  # Optional note under the buttons
+  note_en: "Invoice on request. 50% prepayment to start, the rest on delivery."
+  note_uk: "Рахунок надсилаю на запит. 50% передоплати на старт, решта після здачі роботи."
+
 # Google Search Console verification
 webmaster_verifications:
   google: 6Huwoe8I26yUXQKMM9XkL7m0tn9DK1IaiAf0j0rNQcY

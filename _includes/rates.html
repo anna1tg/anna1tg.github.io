@@ -45,6 +45,24 @@
   <p class="rate-fine">{{ t.rates_fine }}</p>
 </section>
 
+{%- if site.payment.intl != "" or site.payment.ua != "" %}
+<section class="rate-group pay">
+  <div class="rate-head">
+    <h2>{{ t.rates_pay }}</h2>
+  </div>
+  <div class="cta">
+    {%- if site.payment.intl != "" %}
+    <a class="btn primary" href="{{ site.payment.intl }}" target="_blank" rel="noopener">{{ t.pay_intl }} <span aria-hidden="true">↗</span></a>
+    {%- endif %}
+    {%- if site.payment.ua != "" %}
+    <a class="btn ghost" href="{{ site.payment.ua }}" target="_blank" rel="noopener">{{ t.pay_ua }} <span aria-hidden="true">↗</span></a>
+    {%- endif %}
+  </div>
+  {%- assign pay_note = 'note_' | append: lang -%}
+  <p class="rate-fine">{{ site.payment[pay_note] }}</p>
+</section>
+{%- endif %}
+
 <section id="contact">
   <div class="contact">
     <h2>{{ t.rates_cta }}</h2>

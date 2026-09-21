@@ -7,6 +7,7 @@ description: >-
   Anna Aleshko is an AI-powered creative director from Kyiv working worldwide:
   strategy, brand identity, AI art, ads and consulting.
 author: Anna Aleshko
+image: /images/og-card.jpg
 lang: en
 locale: en_US
 
@@ -78,6 +79,7 @@ defaults:
     values:
       lang: uk
       locale: uk_UA
+      image: /images/og-card-uk.jpg
 
 exclude:
   - HOW-TO.md

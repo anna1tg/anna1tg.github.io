@@ -10,7 +10,7 @@
 4. Перетягніть **весь вміст** папки `anna-aleshko-site` (не саму папку, а файли й папки всередині) → **Commit changes**.
    - Порада: у Finder натисніть Cmd+Shift+. — щоб бачити приховані файли; їх теж можна перетягнути, але вони не обов'язкові.
 5. **Settings** → **Pages** → Source: *Deploy from a branch*, Branch: **main**, папка **/(root)** → Save.
-6. Через 1–3 хвилини сайт буде за адресою **https://anna1tg.github.io**
+6. Через 1–3 хвилини сайт буде за адресою **https://annaaleshko.art**
 
 ## 2. Щоб Google знайшов сайт
 

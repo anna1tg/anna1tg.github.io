@@ -11,8 +11,8 @@ image: /images/og-card.jpg
 lang: en
 locale: en_US
 
-# Site address (GitHub username: anna1tg)
-url: "https://anna1tg.github.io"
+# Site address (custom domain)
+url: "https://annaaleshko.art"
 baseurl: ""
 
 social:

@@ -1,0 +1,25 @@
+{%- assign lang = include.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign note_k = 'note_' | append: lang -%}
+{%- if site.data.clients and site.data.clients.size > 0 %}
+<section id="clients">
+  <div class="sec-head">
+    <span class="label">{{ t.clients_label }}</span>
+    <div>
+      <h2>{{ t.clients_title }}</h2>
+    </div>
+  </div>
+  <ul class="clients">
+    {%- for c in site.data.clients %}
+    <li>
+      {%- capture inner -%}
+        {%- if c.logo -%}<img src="{{ c.logo | relative_url }}" alt="{{ c.name }}" loading="lazy">{%- else -%}<span class="c-name">{{ c.name }}</span>{%- endif -%}
+      {%- endcapture -%}
+      {%- if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ inner }}</a>
+      {%- else %}<span>{{ inner }}</span>{%- endif %}
+      {%- if c[note_k] %}<span class="label">{{ c[note_k] }}</span>{%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

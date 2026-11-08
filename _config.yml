@@ -12,7 +12,7 @@ lang: en
 locale: en_US
 
 # Site address (GitHub username: anna1tg)
-url: "https://annaaleshko.art"
+url: "https://anna1tg.github.io"
 baseurl: ""
 
 social:
@@ -21,7 +21,7 @@ social:
     - https://www.instagram.com/anna_aleshko_art/
     - https://www.tiktok.com/@anna_aleshko_art
 
-email: hello@annaaleshko.art
+email: an.aleshko@gmail.com
 instagram: https://www.instagram.com/anna_aleshko_art/
 tiktok: https://www.tiktok.com/@anna_aleshko_art
 youtube: https://youtu.be/ew3CFQ9tVfA

@@ -445,3 +445,39 @@
   .collab-side .reach { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) { .collab-side { grid-template-columns: 1fr; } }
+
+/* ---------- clients ---------- */
+.clients {
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.clients li {
+  display: grid; gap: 4px; align-content: center;
+  padding: 22px 20px;
+  background: var(--ground);
+  min-height: 96px;
+}
+.clients a, .clients span:first-child { font-size: 22px; font-weight: 600; font-stretch: 88%; letter-spacing: -0.01em; text-decoration: none; }
+.clients a:hover { color: var(--accent); }
+.clients .label { font-size: 11px; }
+.clients img { max-height: 40px; max-width: 100%; width: auto; object-fit: contain; }
+.clients a, .clients li > span { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .clients img { filter: invert(1) brightness(1.7); }
+}
+:root[data-theme="dark"] .clients img { filter: invert(1) brightness(1.7); }
+
+/* ---------- contact band ---------- */
+.contact-band {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 16 / 9; object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 32px;
+  background: var(--surface);
+}

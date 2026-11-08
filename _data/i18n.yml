@@ -17,6 +17,8 @@ en:
   switch_label: UA
   months: [January, February, March, April, May, June, July, August, September, October, November, December]
   rates: Rates
+  clients_label: Clients
+  clients_title: Brands I have worked with
   rates_label: Services & rates
   rates_title: What I do and what it costs
   rates_lede: Starting prices for the most requested work. Every project is quoted individually after a short brief.
@@ -46,6 +48,8 @@ uk:
   switch_label: EN
   months: [січня, лютого, березня, квітня, травня, червня, липня, серпня, вересня, жовтня, листопада, грудня]
   rates: Ціни
+  clients_label: Клієнти
+  clients_title: Бренди, з якими я працювала
   rates_label: Послуги та ціни
   rates_title: Що я роблю і скільки це коштує
   rates_lede: Стартові ціни на найпопулярніші послуги. Точну вартість рахую після короткого брифу.

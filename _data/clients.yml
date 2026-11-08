@@ -1,0 +1,31 @@
+# ------------------------------------------------------------
+#  Clients & collaborations — shown on the home page (EN and UA).
+#  name  — as the brand writes it
+#  note  — what you did for them (small line, optional)
+#  logo  — optional file in images/clients/ (PNG with transparent background)
+#  url   — link to the brand or to your work for them (optional)
+#  To add a client, copy one block and keep the indentation (spaces, not Tab).
+# ------------------------------------------------------------
+
+- name: Temu
+  note_en: Creator ads · Reels
+  note_uk: Реклама як у креаторки · Reels
+
+- name: Rugs.in.ua
+  note_en: Content & visuals
+  note_uk: Контент і візуали
+  url: https://www.rugs.in.ua/
+
+- name: Homelittle
+  note_en: AI video ad
+  note_uk: AI-відео для реклами
+  url: https://www.instagram.com/anna_aleshko_art/reel/DZxK7WwqEor/
+
+- name: Vlasne Misto
+  note_en: Content & visuals
+  note_uk: Контент і візуали
+  url: https://www.vlasnemisto.city/
+
+- name: Kids Republic
+  note_en: Content & visuals
+  note_uk: Контент і візуали

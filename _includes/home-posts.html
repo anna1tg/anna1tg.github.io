@@ -1,0 +1,12 @@
+{%- comment -%} Latest articles on the home page, in the page's language {%- endcomment -%}
+{%- assign lang = include.lang | default: 'en' -%}
+<ul class="posts">
+  {%- assign n = 0 -%}
+  {%- for post in site.posts -%}
+  {%- assign plang = post.lang | default: 'en' -%}
+  {%- if plang == lang and n < include.limit -%}
+  {%- assign n = n | plus: 1 %}
+  <li><a href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{% include date.html date=post.date lang=lang %}</time><div><h3>{{ post.title }}</h3>{% if post.description %}<p>{{ post.description }}</p>{% endif %}</div><span class="arr" aria-hidden="true">→</span></a></li>
+  {%- endif -%}
+  {%- endfor %}
+</ul>

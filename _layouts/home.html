@@ -1,0 +1,24 @@
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign alt = nil -%}
+{%- if page.ref -%}{%- assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.url != page.url" | first -%}{%- endif -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  {% seo %}
+  {% feed_meta %}
+  {%- if alt %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ alt.lang | default: 'en' }}" href="{{ alt.url | absolute_url }}">
+  {%- endif %}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%238E1825'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+</head>
+<body>
+{{ content }}
+</body>
+</html>

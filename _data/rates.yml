@@ -113,8 +113,8 @@
   items:
     - en: AI consultation
       uk: Консультація з AI
-      en_desc: 60 min on ChatGPT, Claude, Gemini and AI visuals for your tasks
-      uk_desc: 60 хв про ChatGPT, Claude, Gemini та AI-візуали під ваші задачі
+      en_desc: 40 min on ChatGPT, Claude, Gemini and AI visuals for your tasks
+      uk_desc: 40 хв про ChatGPT, Claude, Gemini та AI-візуали під ваші задачі
       en_price: from $60
       uk_price: від $60
     - en: Content & ads audit

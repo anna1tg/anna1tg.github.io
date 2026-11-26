@@ -319,7 +319,7 @@ image: /images/og-card-uk.jpg
     function ok(){ done.textContent='Запит надіслано: '+when+' за Києвом. Анна підтвердить листом.'; done.hidden=false; form.hidden=true; }
     if(BOOKING_ENDPOINT){
       fetch(BOOKING_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify({_subject:subject,_template:'table',_captcha:'false',name:name,email:mail,time:when,message:text})}).then(function(r){ if(r.ok) ok(); else throw 0; }).catch(function(){ location.href='mailto:'+BOOKING_TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text); ok(); });
+        body:JSON.stringify({_subject:subject,_template:'table',_captcha:'false',_replyto:mail,name:name,email:mail,time:when,message:text})}).then(function(r){ return r.json(); }).then(function(d){ if(d && String(d.success)==='true') ok(); else throw 0; }).catch(function(){ location.href='mailto:'+BOOKING_TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text); ok(); });
     } else { location.href='mailto:'+BOOKING_TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text); ok(); }
   });
   render();
